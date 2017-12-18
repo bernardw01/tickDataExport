@@ -1,0 +1,114 @@
+<div class="container">
+    <div class="well" id="loginBanner">You are now signed out... Please sign in to use the app</div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="panel panel-default panel-transparent">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-user" aria-hidden="true"></i> User Info</h3>
+                </div>
+                <div class="panel-body" id="currentUserInfoPanel">
+                    <div class="media">
+                        <img class="d-flex mr-3" src="" alt="Generic placeholder image"
+                             id="currentUserImage">
+                        <div class="media-body">
+                            <h5 class="mt-0" id="currentUserName">Media heading</h5>
+                            <div id="currentUserInfo">User Info</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div id="tickToolsSection">
+                <div class="panel panel-default panel-transparent">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-user" aria-hidden="true"></i> Tick Tools</h3>
+                    </div>
+                    <div class="panel-body" id="myProfilePanel">
+                        <form>
+                            <input type="date" name="startDate" id="startDate" class="form-control" value="" title="startDate"
+                                   required="required">
+                            <input type="date" name="endDate" id="endDate" class="form-control" value="" title="endDate"
+                                   required="required">
+                        </form>
+                        <span id="cmdBtn1">
+                            <button type="button" class="btn btn-success btn-xs"
+                                    id="btnGetTickRecords" >
+                                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                                Refresh Tick Time Data
+                            </button>
+                        </span>
+                        <span id="cmdBtn2">
+                            <button type="button" class="btn btn-success btn-xs"
+                                    id="btnRefreshTables" >
+                                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                                Refresh Tick Lookup Data
+                            </button>
+                        </span>
+                        <span id="cmdBtn3">
+                            <button type="button" class="btn btn-success btn-xs"
+                                    id="btnCleanTables" >
+                                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                                Clean Tick Tables
+                            </button>
+                        </span>
+                        <span id="currentRecCount">
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div id="qbSection">
+                <div class="panel panel-default panel-transparent">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-users" aria-hidden="true"></i> QB Tools</h3>
+                    </div>
+                    <div class="panel-body" id="myPeoplePanel">
+                        This is where my people information goes
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="addUserModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><i class="fa fa-user" aria-hidden="true"></i> Add/Edit User</h4>
+            </div>
+            <div class="modal-body">
+                <form id="newUserForm" action="">
+                    <div class="form-group">
+                        <label for="userDisplayName">Full Name:</label>
+                        <input type="text" id="userDisplayName" name="" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userEmail">Email:</label>
+                        <input type="email" id="userEmail" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userRole">User Role:</label>
+                        <select class="form-control" id="userRole">
+                            <option>Reporter</option>
+                            <option>User</option>
+                            <option>Admin</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-success" id="btnModAddUser">Add User</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+
+    </div>
+</div>

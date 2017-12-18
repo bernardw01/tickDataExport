@@ -1,0 +1,36 @@
+
+
+<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/2.1.1/firebaseui.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBPe65KqvuSXl5O7ZWEaAX7DbUzzhjx1_4",
+        authDomain: "stratplanner-179201.firebaseapp.com",
+        databaseURL: "https://stratplanner-179201.firebaseio.com",
+        projectId: "stratplanner-179201",
+        storageBucket: "stratplanner-179201.appspot.com",
+        messagingSenderId: "78793308042"
+    };
+    firebase.initializeApp(config);
+
+    // FirebaseUI config.
+    var uiConfig = {
+        signInSuccessUrl: '/',
+        signInOptions: [
+            // Leave the lines as is for the providers you want to offer your users.
+            firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+
+        ],
+        // Terms of service url.
+        tosUrl: '<your-tos-url>'
+    };
+
+    // Initialize the FirebaseUI Widget using Firebase.
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+    // The start method will wait until the DOM is loaded.
+    ui.start('#firebaseui-auth-container', uiConfig);
+</script>
+
+<div id="signInMessage">Please sign in to access this app....</div>
+<div id="firebaseui-auth-container"></div>
